@@ -14,4 +14,3 @@ module Scales
     end
   end
 end
-

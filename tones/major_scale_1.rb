@@ -1,6 +1,7 @@
+require 'byebug'
 module Tones
   class MajorScaleOne < Tone
-    MAJOR_SCALE_PATTERN_1 = [0, 2, 4,	5, 7, 9, 11].freeze
+   MAJOR_SCALE_PATTERN_1 = [0, 2, 4,	5, 7, 9, 11].freeze
 
     def self.by_note(note)
       major_note_index = index_of_mode(note)

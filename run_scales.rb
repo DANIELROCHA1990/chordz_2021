@@ -1,15 +1,15 @@
 require 'colorize'
 require 'byebug'
 
-load 'music_theory/scale.rb'
-load 'music_theory/scales/ionian.rb'
-load 'music_theory/scales/dorian.rb'
-load 'music_theory/scales/phrygian.rb'
-load 'music_theory/scales/lydian.rb'
-load 'music_theory/scales/mixolydian.rb'
-load 'music_theory/scales/aeolian.rb'
-load 'music_theory/scales/locrian.rb'
-load 'music_theory/scales/all_modes_of_scales.rb'
+load 'scale.rb'
+load 'scales/ionian.rb'
+load 'scales/dorian.rb'
+load 'scales/phrygian.rb'
+load 'scales/lydian.rb'
+load 'scales/mixolydian.rb'
+load 'scales/aeolian.rb'
+load 'scales/locrian.rb'
+load 'scales/all_modes_of_scales.rb'
 
 puts
 puts '##################'.green
