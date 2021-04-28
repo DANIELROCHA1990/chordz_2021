@@ -1,5 +1,5 @@
 module Tones
-  class MajorScalethree < Tone
+  class MajorScaleThree < Tone
     MAJOR_SCALE_PATTERN_3 = [3, 5, 7, 8, 10, 0, 2].freeze
 
     def self.by_note(note)
