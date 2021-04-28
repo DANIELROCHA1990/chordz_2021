@@ -1,4 +1,4 @@
-module Scales
+module GreekModes
   class AllModesOfScales < Scale
 
     def self.all_by_note(note)

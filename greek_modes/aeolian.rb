@@ -1,4 +1,4 @@
-module Scales
+module GreekModes
   class Aeolian < Scale
     AEOLIAN_SCALE_MODE = [9, 11, 0, 2, 4, 5, 7, 9].freeze # T st T T st T T
 
@@ -12,7 +12,6 @@ module Scales
           reseted_aeolian_scale_note_index = aeolian_scale_note_index - CHROMATIC.length
           CHROMATIC[reseted_aeolian_scale_note_index]
         end
-
       end
     end
   end

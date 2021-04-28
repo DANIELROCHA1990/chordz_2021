@@ -1,4 +1,4 @@
-module Scales
+module GreekModes
   class Dorian < Scale
     DORIAN_SCALE_MODE = [2, 4, 5, 7, 9, 11, 0, 2].freeze  # T st T T T st T
 

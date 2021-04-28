@@ -29,7 +29,7 @@ def initial_menu_tone
       scale_presenter { Tones::AllPossibleMinorScalesByNote.all_minor_by_note(@note) }
     when '3' then
       scale_presenter { Tones::AllPossibleScalesByNote.all_possible_by_note(@note) }
-    else option !=(1..2)
+    else option !=(1..3)
       puts 'Escolha uma opção válida!'.red
       initial_menu_tone
     end

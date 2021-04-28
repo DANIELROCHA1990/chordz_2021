@@ -1,5 +1,5 @@
 # Scales::Locrian.by_note('C')
-module Scales
+module GreekModes
   class Locrian < Scale
     LOCRIAN_SCALE_MODE = [11, 0, 2, 4, 5, 7, 9, 11].freeze # st T T st T T T
 

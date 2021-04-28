@@ -1,4 +1,4 @@
-module Scales
+module GreekModes
   class Lydian < Scale
     LYDIAN_SCALE_MODE = [5, 7, 9, 11, 0, 2, 4, 5].freeze # T T T st T T st
 

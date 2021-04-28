@@ -1,4 +1,4 @@
-module Scales
+module GreekModes
   class Ionian < Scale
     IONIAN_SCALE_MODE = [0, 2, 4, 5, 7, 9, 11, 0].freeze  # T T st T T T st
 

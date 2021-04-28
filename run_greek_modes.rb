@@ -1,15 +1,13 @@
 require 'colorize'
-require 'byebug'
-
 load 'scale.rb'
-load 'scales/ionian.rb'
-load 'scales/dorian.rb'
-load 'scales/phrygian.rb'
-load 'scales/lydian.rb'
-load 'scales/mixolydian.rb'
-load 'scales/aeolian.rb'
-load 'scales/locrian.rb'
-load 'scales/all_modes_of_scales.rb'
+load 'greek_modes/ionian.rb'
+load 'greek_modes/dorian.rb'
+load 'greek_modes/phrygian.rb'
+load 'greek_modes/lydian.rb'
+load 'greek_modes/mixolydian.rb'
+load 'greek_modes/aeolian.rb'
+load 'greek_modes/locrian.rb'
+load 'greek_modes/all_modes_of_scales.rb'
 
 puts
 puts '##################'.green
@@ -29,21 +27,21 @@ def initial_menu_modes
 
   case option
     when '1' then
-      scale_presenter { Scales::Ionian.by_note(@note) }
+      scale_presenter { GreekModes::Ionian.by_note(@note) }
     when '2' then
-      scale_presenter { Scales::Dorian.by_note(@note) }
+      scale_presenter { GreekModes::Dorian.by_note(@note) }
     when '3' then
-      scale_presenter { Scales::Phrygian.by_note(@note) }
+      scale_presenter { GreekModes::Phrygian.by_note(@note) }
     when '4' then
-      scale_presenter { Scales::Lydian.by_note(@note) }
+      scale_presenter { GreekModes::Lydian.by_note(@note) }
     when '5' then
-      scale_presenter { Scales::Mixolydian.by_note(@note) }
+      scale_presenter { GreekModes::Mixolydian.by_note(@note) }
     when '6' then
-      scale_presenter { Scales::Aeolian.by_note(@note) }
+      scale_presenter { GreekModes::Aeolian.by_note(@note) }
     when '7' then
-      scale_presenter { Scales::Locrian.by_note(@note) }
+      scale_presenter { GreekModes::Locrian.by_note(@note) }
     when '8' then
-      scale_presenter { Scales::AllModesOfScales.all_by_note(@note) }
+      scale_presenter { GreekModes::AllModesOfScales.all_by_note(@note) }
     else option !=(1..8)
       puts 'Escolha uma opção válida!'.red
       initial_menu_modes
