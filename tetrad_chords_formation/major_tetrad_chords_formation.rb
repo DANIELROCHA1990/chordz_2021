@@ -1,10 +1,10 @@
 module FormationOfChords
-  class MajorTriadChordFormation < Scale
-    MAJOR_TRIAD_CHORD_PATTERN = [0, 4, 7].freeze  # Tonica-terça maior-quinta justa
+  class MajorTetradChordFormation < Scale
+    MAJOR_TETRAD_CHORD_PATTERN = [0, 4, 7, 11].freeze  # Tonica-terça maior-quinta justa
 
     def self.by_note(note)
       major_chord_index = index_of_mode(note)
-      MAJOR_TRIAD_CHORD_PATTERN.map do |major_chord_interval| # Interação com a classe Chord
+      MAJOR_TETRAD_CHORD_PATTERN.map do |major_chord_interval| # Interação com a classe Chord
         major_chord_note_index = major_chord_index + major_chord_interval
         if major_chord_note_index <= (CHROMATIC.length - 1)
           CHROMATIC[major_chord_note_index]

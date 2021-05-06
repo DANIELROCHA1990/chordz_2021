@@ -1,52 +1,52 @@
-require 'colorize'
+module FormationOfChords
+  class ApplicationChordFormation
+    require 'colorize'
+    load 'triad_chords_formation/major_triad_chords_formation.rb'
+    load 'triad_chords_formation/minor_triad_chords_formation.rb'
+    load 'triad_chords_formation/diminished_triad_chords_formation.rb'
+    load 'triad_chords_formation/major_minor_diminished_triad_chords_formation.rb'
 
-load 'scale.rb'
-load 'triad_chords_formation/major_triad_chords_formation.rb'
-load 'triad_chords_formation/minor_triad_chords_formation.rb'
-load 'triad_chords_formation/diminished_triad_chords_formation.rb'
-load 'triad_chords_formation/major_minor_diminished_triad_chords_formation.rb'
+    def self.menu_reload_triad
+      puts 'Deseja voltar ao menu inicial? <s/n>'.red
+      continue = gets.chomp.upcase
 
-puts
-puts "##########################".green
-puts "#    CHORDS FORMATION    #".green
-puts "##########################".green
+      while continue == 'S' do
+        ApplicationChordFormation.initial_menu_chords_formation
+      end
 
-def triad_chords_formation_presenter 
-  puts 'Digite a nota:'
-  print @note = gets.chomp.upcase
-  puts yield.to_s.colorize(:color => :red, :background => :black)  
-end
-
-def initial_menu_chords_formation
-  puts "Escolha o modo abaixo:".green
-  puts "1 - Maior| 2 - Menor| 3 - Diminuto| 4 - ALL".blue
-  option = gets.chomp
-
-  case option
-    when '1' then
-      triad_chords_formation_presenter { TriadChords::MajorTriadChordFormation.by_note(@note) }
-    when '2' then
-      triad_chords_formation_presenter { TriadChords::MinorTriadChordFormation.by_note(@note) }
-    when '3' then
-      triad_chords_formation_presenter { TriadChords::DiminishedTriadChordFormation.by_note(@note) }
-    when '4' then
-      triad_chords_formation_presenter { TriadChords::MajorAndMinorAndDiminishedTriadChordsFormation.formed_by_note(@note) }
-    else option_chords !=(1..4) 
-      puts "Escolha uma opção válida!".red
-      initial_menu_chords_formation
+      if continue == 'N'
+        puts 'bye'
+      end
     end
-end
 
-puts initial_menu_chords_formation
-puts 'Deseja recomeçar? <s/n>'.red
-continue = gets.chomp
+    def self.triad_chords_formation_presenter 
+      puts 'Digite a nota:'
+      print @note = gets.chomp.upcase
+      puts yield.to_s.colorize(color: :red, background: :black)  
+      puts ApplicationChordFormation.menu_reload_triad
+    end
 
-if continue == 'n' || continue == 'N'
-  puts 'Adeus!'.blue
-end
+    def self.initial_menu_triad_chords_formation
+      puts "##########################".green
+      puts "#     TRIAD FORMATION    #".green
+      puts "##########################".green
+      puts "Escolha o modo abaixo:".green
+      puts "1 - Maior| 2 - Menor| 3 - Diminuto| 4 - ALL".blue
+      option = gets.chomp
 
-while continue == 's' || continue == 'S' do
- puts initial_menu_chords_formation
- puts 'Deseja recomeçar? <s/n>'.red
- continue = gets.chomp
+      case option
+      when '1' then
+        ApplicationChordFormation.triad_chords_formation_presenter { MajorTriadChordFormation.by_note(@note) }
+      when '2' then
+        ApplicationChordFormation.triad_chords_formation_presenter { MinorTriadChordFormation.by_note(@note) }
+      when '3' then
+        ApplicationChordFormation.triad_chords_formation_presenter { DiminishedTriadChordFormation.by_note(@note) }
+      when '4' then
+        ApplicationChordFormation.triad_chords_formation_presenter { MajorAndMinorAndDiminishedTriadChordsFormation.formed_by_note(@note) }
+      else option !=(1..4) 
+        puts "Escolha uma opção válida!".red
+        ApplicationChordFormation.initial_menu_triad_chords_formation
+      end
+    end
+  end
 end

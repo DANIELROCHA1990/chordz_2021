@@ -39,12 +39,11 @@ puts initial_menu_scales
 puts 'Deseja reomeçar? <s/n>'.red
 continue = gets.chomp
 
-if continue == 'n' || continue == 'N'
-  puts 'Obrigado!'.blue
-end
-
 while continue == 's' || continue == 'S' do
  puts initial_menu_scales
  puts 'Deseja recomeçar? <s/n>'.red
  continue = gets.chomp
+  if continue == 'n' || continue == 'N'
+    puts 'Obrigado!'.blue
+  end
 end
