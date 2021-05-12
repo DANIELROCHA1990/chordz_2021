@@ -1,4 +1,4 @@
-
+require 'colorize'
 
 module Tones
   class AllPossibleScalesByNote < Tone

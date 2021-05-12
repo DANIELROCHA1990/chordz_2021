@@ -11,11 +11,12 @@ module FormationOfChords
       continue = gets.chomp.upcase
 
       while continue == 'S' do
-        ApplicationChordFormation.initial_menu_chords_formation
+        initial_menu_chords_formation
       end
 
       if continue == 'N'
-        puts 'bye'
+        puts 'Obrigado!'
+        exit
       end
     end
 
