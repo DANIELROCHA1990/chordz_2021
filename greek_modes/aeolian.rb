@@ -6,12 +6,8 @@ module GreekModes
       aeolian_note_index = index_of_mode(note)
       AEOLIAN_SCALE_MODE.map do |aeolian_interval| # Interação
         aeolian_scale_note_index = (aeolian_note_index - 9) + aeolian_interval
-        if aeolian_scale_note_index <= (CHROMATIC.length - 1)
-          CHROMATIC[aeolian_scale_note_index]
-        else
-          reseted_aeolian_scale_note_index = aeolian_scale_note_index - CHROMATIC.length
-          CHROMATIC[reseted_aeolian_scale_note_index]
-        end
+        reseted_aeolian_scale_note_index = aeolian_scale_note_index - CHROMATIC.length
+        scale_maker_by_note(aeolian_scale_note_index, reseted_aeolian_scale_note_index)
       end
     end
   end

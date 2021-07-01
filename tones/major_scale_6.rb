@@ -6,12 +6,8 @@ module Tones
       major_note_index_6 = index_of_mode(note)
       MAJOR_SCALE_PATTERN_6.map do |major_interval_6| # Interação
         major_scale_note_index_6 = major_note_index_6 + major_interval_6
-        if major_scale_note_index_6 <= (CHROMATIC.length - 1)
-          CHROMATIC[major_scale_note_index_6]
-        else
-          reseted_major_scale_note_index_6 = major_scale_note_index_6 - CHROMATIC.length
-          CHROMATIC[reseted_major_scale_note_index_6]
-        end
+        reseted_major_scale_note_index_6 = major_scale_note_index_6 - CHROMATIC.length
+        scale_maker_by_note(major_scale_note_index_6, reseted_major_scale_note_index_6)
       end
     end
   end

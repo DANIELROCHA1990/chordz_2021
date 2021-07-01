@@ -1,19 +1,15 @@
   require 'colorize'
-  require 'byebug'
-  
-
   load 'scale.rb'
   load 'scales/major_scales.rb'
   load 'scales/minor_scales.rb'
   load 'scales/major_and_minor_scales.rb'
-
   puts
   puts "##################".green
   puts "#     Scales     #".green
   puts "##################".green
 
   def scale_presenter
-    puts 'Digite a nota:'
+    puts 'Digite a nota:'.yellow
     print @note = gets.chomp.upcase
     puts yield.to_s.colorize(color: :red, background: :black)
   end

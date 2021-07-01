@@ -11,17 +11,32 @@ puts "##################".green
 puts "#     Tones      #".green
 puts "##################".green
 
+def menu_reload_tones
+  puts 'Deseja voltar ao menu inicial? <s/n>'.red
+  continue = gets.chomp.upcase
+
+  while continue == 'S' do
+    initial_menu_tone
+  end
+
+  if continue == 'N'
+    puts 'Obrigado!'
+    exit
+  end
+end
+
 def scale_presenter
   puts 'Digite a nota:'
   print @note = gets.chomp.upcase
   puts yield.to_s.colorize(color: :red, background: :black)
+  menu_reload_tones
 end
 
 def initial_menu_tone
   puts 'Escolha o modo abaixo:'.green
   puts '1 - Maior | 2 - Menor | 3 - ALL'.blue
   option = gets.chomp
-  
+
   case option
     when '1' then
       scale_presenter { Tones::AllPossibleMajorScalesByNote.all_major_by_note(@note) }
@@ -35,17 +50,5 @@ def initial_menu_tone
     end
 end
 
-puts initial_menu_tone
-puts 'Deseja recomeçar? <s/n>'.red
-continue = gets.chomp
-
-
-
-while continue == 's' || continue == 'S' do
- puts initial_menu_tone
- puts 'Deseja recomeçar? <s/n>'.red
- continue = gets.chomp
-  if continue == 'n' || continue == 'N'
-    puts 'Volte Sempre!'.blue
-  end
-end
+p initial_menu_tone
+p menu_reload_tones

@@ -6,12 +6,8 @@ module KeyChords
       major_key_index = index_of_mode(note)
       MAJOR_KEY_PATTERN.map do |major_key_interval| # Interação com a classe Keys
         major_key_note_index = major_key_index + major_key_interval
-        if major_key_note_index <= (CHROMATIC.length - 1)
-          CHROMATIC[major_key_note_index]
-        else
-          new_major_key_note_index = major_key_note_index - CHROMATIC.length
-          CHROMATIC[new_major_key_note_index]
-        end
+        new_major_key_note_index = major_key_note_index - CHROMATIC.length
+        scale_maker_by_note(major_key_note_index, new_major_key_note_index)
       end
     end
   end

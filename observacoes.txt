@@ -1,0 +1,4 @@
+Corrigir ou implementar
+
+- Ao digitar a nota bemol (ex.: Db ou db) há um erro pois o metodo deixa tudo upcase e o bemol é downcase, fazer split?
+- Implementar um menu geral com todos os "run_..."

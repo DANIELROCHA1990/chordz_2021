@@ -6,12 +6,8 @@ module GreekModes
       ionian_note_index = index_of_mode(note)
       IONIAN_SCALE_MODE.map do |ionian_interval| # Interação
         ionian_scale_note_index = ionian_note_index + ionian_interval
-        if ionian_scale_note_index <= (CHROMATIC.length - 1)
-          CHROMATIC[ionian_scale_note_index]
-        else
-          reseted_ionian_scale_note_index = ionian_scale_note_index - CHROMATIC.length
-          CHROMATIC[reseted_ionian_scale_note_index]
-        end
+        reseted_ionian_scale_note_index = ionian_scale_note_index - CHROMATIC.length
+        scale_maker_by_note(ionian_scale_note_index, reseted_ionian_scale_note_index)
       end
     end
   end

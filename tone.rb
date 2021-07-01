@@ -6,4 +6,8 @@ class Tone
   def self.index_of_mode(note)
     CHROMATIC.index(note) || CHROMATIC.index(CHROMATIC_PAIR[note])
   end
+  
+  def self.scale_maker_by_note(note_index, reseted_note_index)
+    note_index <= (CHROMATIC.length - 1) ? CHROMATIC[note_index] : CHROMATIC[reseted_note_index]
+  end
 end

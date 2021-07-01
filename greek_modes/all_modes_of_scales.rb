@@ -9,7 +9,8 @@ module GreekModes
       mixolydian = Mixolydian.by_note(note)
       aeolian = Aeolian.by_note(note)
       locrian = Locrian.by_note(note)
-      print all_modes_of_scales = { ionian: ionian, dorian: dorian, phrygian: phrygian, lydian: lydian, mixolydian: mixolydian,
+      
+      all_modes_of_scales = { ionian: ionian, dorian: dorian, phrygian: phrygian, lydian: lydian, mixolydian: mixolydian,
                               aeolian: aeolian, locrian: locrian }
     end
   end

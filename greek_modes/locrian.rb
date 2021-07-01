@@ -7,12 +7,8 @@ module GreekModes
       locrian_note_index = index_of_mode(note)
       LOCRIAN_SCALE_MODE.map do |locrian_interval| # Interação
         locrian_scale_note_index = (locrian_note_index - 11) + locrian_interval
-        if locrian_scale_note_index <= (CHROMATIC.length - 1)
-          CHROMATIC[locrian_scale_note_index]
-        else
-          reseted_locrian_scale_note_index = locrian_scale_note_index - CHROMATIC.length
-          CHROMATIC[reseted_locrian_scale_note_index]
-        end
+        reseted_locrian_scale_note_index = locrian_scale_note_index - CHROMATIC.length
+        scale_maker_by_note(locrian_scale_note_index, reseted_locrian_scale_note_index)
       end
     end
   end

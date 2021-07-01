@@ -6,13 +6,8 @@ module GreekModes
       lydian_note_index = index_of_mode(note)
       LYDIAN_SCALE_MODE.map do |lydian_interval| # Interação
         lydian_scale_note_index = (lydian_note_index - 5) + lydian_interval
-
-        if lydian_scale_note_index <= (CHROMATIC.length - 1)
-          CHROMATIC[lydian_scale_note_index]
-        else
-          reseted_lydian_scale_note_index = lydian_scale_note_index - CHROMATIC.length
-          CHROMATIC[reseted_lydian_scale_note_index]
-        end
+        reseted_lydian_scale_note_index = lydian_scale_note_index - CHROMATIC.length
+        scale_maker_by_note(lydian_scale_note_index, reseted_lydian_scale_note_index)
       end
     end
   end

@@ -7,13 +7,8 @@ module Tones
 
       MAJOR_SCALE_PATTERN_2.map do |major_interval_2| # Interação
         major_scale_note_index_2 = major_note_index_2 + major_interval_2
-
-        if major_scale_note_index_2 <= (CHROMATIC.length - 1)
-          CHROMATIC[major_scale_note_index_2]
-        else
-          reseted_major_scale_note_index_2 = major_scale_note_index_2 - CHROMATIC.length
-          CHROMATIC[reseted_major_scale_note_index_2]
-        end
+        reseted_major_scale_note_index_2 = major_scale_note_index_2 - CHROMATIC.length
+        scale_maker_by_note(major_scale_note_index_2, reseted_major_scale_note_index_2)
       end
     end
   end

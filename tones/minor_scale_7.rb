@@ -5,12 +5,8 @@ module Tones
       minor_note_index_7 = index_of_mode(note)
       MINOR_SCALE_PATTERN_7.map do |minor_interval_7| # Interação
         minor_scale_note_index_7 = minor_note_index_7 + minor_interval_7
-        if minor_scale_note_index_7 <= (CHROMATIC.length - 1)
-          CHROMATIC[minor_scale_note_index_7]
-        else
-          reseted_minor_scale_note_index_7 = minor_scale_note_index_7 - CHROMATIC.length
-          CHROMATIC[reseted_minor_scale_note_index_7]
-        end
+        reseted_minor_scale_note_index_7 = minor_scale_note_index_7 - CHROMATIC.length
+        scale_maker_by_note(minor_scale_note_index_7, reseted_minor_scale_note_index_7)
       end
     end
   end

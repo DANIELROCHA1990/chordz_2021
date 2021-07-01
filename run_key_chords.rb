@@ -10,7 +10,6 @@ puts "##################".green
 puts "#   Key Chords   #".green
 puts "##################".green
 
-
 def key_chord_presenter
   puts 'Digite a nota em CAIXA ALTA:'
   print @note = gets.chomp.upcase

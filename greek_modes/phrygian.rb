@@ -6,13 +6,8 @@ module GreekModes
 
       PHRYGIAN_SCALE_MODE.map do |phrygian_interval| # Interação
         phrygian_scale_note_index = (phrygian_note_index - 4) + phrygian_interval
-
-        if phrygian_scale_note_index <= (CHROMATIC.length - 1)
-          CHROMATIC[phrygian_scale_note_index]
-        else
-          reseted_phrygian_scale_note_index = phrygian_scale_note_index - CHROMATIC.length
-          CHROMATIC[reseted_phrygian_scale_note_index]
-        end
+        reseted_phrygian_scale_note_index = phrygian_scale_note_index - CHROMATIC.length
+        scale_maker_by_note(phrygian_scale_note_index, reseted_phrygian_scale_note_index)
       end
     end
   end

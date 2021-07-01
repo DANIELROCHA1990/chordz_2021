@@ -6,12 +6,8 @@ module FormationOfChords
       major_chord_index = index_of_mode(note)
       MAJOR_TETRAD_CHORD_PATTERN.map do |major_chord_interval| # Interação com a classe Chord
         major_chord_note_index = major_chord_index + major_chord_interval
-        if major_chord_note_index <= (CHROMATIC.length - 1)
-          CHROMATIC[major_chord_note_index]
-        else
-          new_major_chord_note_index = major_chord_note_index - CHROMATIC.length
-          CHROMATIC[new_major_chord_note_index]
-        end
+        new_major_chord_note_index = major_chord_note_index - CHROMATIC.length
+        scale_maker_by_note(major_chord_note_index, new_major_chord_note_index)
       end
     end
   end

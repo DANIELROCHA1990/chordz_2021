@@ -7,13 +7,8 @@ module GreekModes
 
       MIXOLYDIAN_SCALE_MODE.map do |mixolydian_interval| # Interação
         mixolydian_scale_note_index = (mixolydian_note_index - 7) + mixolydian_interval
-
-        if mixolydian_scale_note_index <= (CHROMATIC.length - 1)
-          CHROMATIC[mixolydian_scale_note_index]
-        else
-          reseted_mixolydian_scale_note_index = mixolydian_scale_note_index - CHROMATIC.length
-          CHROMATIC[reseted_mixolydian_scale_note_index]
-        end
+        reseted_mixolydian_scale_note_index = mixolydian_scale_note_index - CHROMATIC.length
+        scale_maker_by_note(mixolydian_scale_note_index, reseted_mixolydian_scale_note_index)
       end
     end
   end
