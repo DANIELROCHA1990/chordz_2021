@@ -1,5 +1,5 @@
-module FormationOfChords
-  class MajorTetradChordFormation < Scale
+module MakeOfChords
+  class MajorTetradChordFormation < TetradScale
     MAJOR_TETRAD_CHORD_PATTERN = [0, 4, 7, 11].freeze  # Tonica-terça maior-quinta justa
 
     def self.by_note(note)

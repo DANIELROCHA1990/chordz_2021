@@ -1,23 +1,28 @@
 require 'colorize'
-load 'scale.rb'
-load 'formation_mixin.rb'
+load 'lib/methods_run_chords_formation.rb'
 
-def initial_menu_chords_formation
 puts '##########################'.green
 puts '#    CHORDS FORMATION    #'.green
 puts '##########################'.green
-puts 'Escolha o modo abaixo:'.green
-puts '1 - TETRAD | 2 - TRIAD'.blue
-option = gets.chomp
 
+def invalid_option_chords_formation
+  system('clear')
+  puts 'Escolha uma opção válida!'.red
+  puts main_menu_chords_formation
+end
+
+def main_menu_chords_formation
+  puts 'Escolha o modo abaixo:'.green
+  puts '1 - TETRAD | 2 - TRIAD'.blue
+  p options_of_chords_formation
+end
+
+def options_of_chords_formation
   case option
-  when '1' then
-    puts FormationOfChords::ApplicationChordFormation.initial_menu_tetrad_chords_formation
-  when '2' then
-    puts FormationOfChords::ApplicationChordFormation.initial_menu_triad_chords_formation
-  else option !=(1..2)
-    puts 'Escolha uma opção válida!'.red
-    initial_menu_chords_formation
+  when '1' then puts call_method_tetrad
+  when '2' then puts call_method_triad
+  else invalid_option_chords_formation
   end
 end
-puts initial_menu_chords_formation
+
+main_menu_chords_formation

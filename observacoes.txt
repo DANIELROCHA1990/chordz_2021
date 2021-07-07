@@ -2,3 +2,14 @@ Corrigir ou implementar
 
 - Ao digitar a nota bemol (ex.: Db ou db) há um erro pois o metodo deixa tudo upcase e o bemol é downcase, fazer split?
 - Implementar um menu geral com todos os "run_..."
+
+def ask_to_continue
+  puts 'Deseja reomeçar? <s/n>'.red
+  reply = gets.chomp.downcase
+  while reply == 's'
+    puts initial_menu_scales
+    if reply == 'n'
+      puts 'Obrigado!'.blue
+    end
+  end
+end

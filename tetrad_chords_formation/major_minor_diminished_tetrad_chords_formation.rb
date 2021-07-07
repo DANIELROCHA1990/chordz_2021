@@ -1,5 +1,5 @@
-module FormationOfChords
-  class MajorAndMinorAndDiminishedTetradChordsFormation < Scale
+module MakeOfChords
+  class AllTetradChordsFormation < TetradScale
 
     def self.formed_by_note(note)
       major = MajorTetradChordFormation.by_note(note)

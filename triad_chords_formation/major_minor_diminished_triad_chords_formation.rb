@@ -1,5 +1,5 @@
-module FormationOfChords
-  class MajorAndMinorAndDiminishedTriadChordsFormation < Scale
+module MakeOfChords
+  class AllTriadChordsFormation < TriadScale
 
     def self.formed_by_note(note)
       major = MajorTriadChordFormation.by_note(note)

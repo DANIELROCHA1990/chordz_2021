@@ -1,5 +1,5 @@
-module FormationOfChords
-  class DiminishedTetradChordFormation < Scale
+module MakeOfChords
+  class DiminishedTetradChordFormation < TetradScale
     DIMINISHED_TETRAD_CHORD_PATTERN = [0, 3, 6, 10].freeze # Tonica-terça menor-quinta menor
 
     def self.by_note(note)
