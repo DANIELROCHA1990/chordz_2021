@@ -1,1 +1,19 @@
-For a complete experience use the "chordz.rb" archive.
+~ Possible notes
+- C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B 
+- C# => C#/Db, 'D#' => D#/Eb, F# => F#/Gb, A# => A#/Bb, Db => C#/Db, 'Eb' => D#/Eb, Gb => F#/Gb, Bb => A#/Bb
+
+~ scripts
+- run_greek_modes.rb > find any greek mode by one note
+- run_key_chords.rb > find key chords (major and minor) by note
+- run_scales.rb > fins scales (major and minor) by note
+- run_tones.rb > find all possibles scales (major and minor) by note
+- run_chords_formation.rb > shows the notes (triad or tetrad) that make up the chords
+
+~ comands
+put in terminal ruby name_of_script.rb > select any option > put the note
+
+~ notes
+- you can enter both uppercase and lowercase letters, in addition to # (for sharps) and b (for flats);
+- the program is still in the creation phase, errors can occur, try not to miss the note and put a letter that does not
+  belong to the scale LOL;
+- ENJOY!!
