@@ -1,6 +1,5 @@
 require 'colorize'
-load 'lib/scale_tetrad.rb'
-load 'lib/constantes.rb'
+load 'lib/scales.rb'
 load 'tetrad_chords_formation/major_tetrad_chords_formation.rb'
 load 'tetrad_chords_formation/minor_tetrad_chords_formation.rb'
 load 'tetrad_chords_formation/diminished_tetrad_chords_formation.rb'
@@ -18,10 +17,10 @@ end
 
 def options_of_menu_tetrad_chords_formation
   case option
-  when '1' then scale_presenter_tetrad_chords_formation { MakeOfChords::MajorTetradChordFormation.by_note(@note) }
-  when '2' then scale_presenter_tetrad_chords_formation { MakeOfChords::MinorTetradChordFormation.by_note(@note) }
-  when '3' then scale_presenter_tetrad_chords_formation { MakeOfChords::DiminishedTetradChordFormation.by_note(@note) }
-  when '4' then scale_presenter_tetrad_chords_formation { MakeOfChords::AllTetradChordsFormation.formed_by_note(@note) }
+  when '1' then scale_presenter_tetrad_chords_formation { Notes::MajorTetradChordFormation.by_note(@note) }
+  when '2' then scale_presenter_tetrad_chords_formation { Notes::MinorTetradChordFormation.by_note(@note) }
+  when '3' then scale_presenter_tetrad_chords_formation { Notes::DiminishedTetradChordFormation.by_note(@note) }
+  when '4' then scale_presenter_tetrad_chords_formation { Notes::AllTetradChordsFormation.formed_by_note(@note) }
   else invalid_option_message_tetrad_chords_formation
   end
 end

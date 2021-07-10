@@ -1,4 +1,4 @@
-module MakeOfChords
+module Notes
   class MinorTriadChordFormation < TriadScale
     MINOR_TRIAD_CHORD_PATTERN = [0, 3, 7].freeze # Tonica-terça menor-quinta justa
 

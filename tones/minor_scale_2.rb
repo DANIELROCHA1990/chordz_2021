@@ -1,4 +1,4 @@
-module Tones
+module Notes
   class MinorScaleTwo < Tone
     MINOR_SCALE_PATTERN_2 = [2, 4, 5, 7, 9, 10, 0].freeze
 

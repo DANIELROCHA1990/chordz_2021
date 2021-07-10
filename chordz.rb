@@ -1,5 +1,5 @@
 require 'colorize'
-load 'lib/methods_chordz.rb'
+load 'lib/methods.rb'
 puts '############################'.green
 puts '#   Bem vindo ao Chordz!   #'.green
 puts '############################'.green
@@ -7,7 +7,7 @@ puts '############################'.green
 def main_menu_chordz
   puts 'Escolha o modo abaixo:'.green
   puts '1 - Scales | 2 - Modes | 3 - Tone | 4 - Key Chords | 5 - Chords | 6 - Exit'.blue
-  p options_of_chordz
+  options_of_chordz
 end
 
 def options_of_chordz
@@ -18,7 +18,8 @@ def options_of_chordz
   when '4' then load './run_key_chords.rb'
   when '5' then load './run_chords_formation.rb'
   when '6' then clear_and_exit_chordz
-  else invalid_option_chordz
+  else
+    invalid_option { main_menu_chordz }
   end
 end
 

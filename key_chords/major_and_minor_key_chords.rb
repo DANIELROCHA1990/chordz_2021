@@ -1,4 +1,4 @@
-module KeyChords
+module Notes
   class MajorAndMinorKeyChord < KeyChord
     def self.all_key_chords_by_note(note)
       major_key = MajorKeyChord.by_note(note)

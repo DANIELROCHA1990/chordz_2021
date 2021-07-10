@@ -1,5 +1,5 @@
 # modulo dos modos gregos
-module GreekModes
+module Notes
   # Classe Locrian herda de Scale, no arquivo scales.rb
   class Locrian < Scale
     LOCRIAN_SCALE_MODE = [11, 0, 2, 4, 5, 7, 9, 11].freeze # st T T st T T T

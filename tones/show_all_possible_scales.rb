@@ -1,5 +1,5 @@
 require 'colorize'
-module Tones
+module Notes
   class AllPossibleScalesByNote < Tone
     def self.all_possible_by_note(note)
       major_1 = MajorScaleOne.by_note(note)

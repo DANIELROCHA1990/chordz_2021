@@ -6,7 +6,7 @@ load 'tones/minor_scale_5.rb'
 load 'tones/minor_scale_6.rb'
 load 'tones/minor_scale_7.rb' 
 
-module Tones
+module Notes
   class AllPossibleMinorScalesByNote < Tone
     def self.all_minor_by_note(note)
       minor_1 = MinorScaleOne.by_note(note)

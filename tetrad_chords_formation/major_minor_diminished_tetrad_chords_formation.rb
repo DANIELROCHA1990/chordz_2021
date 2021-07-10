@@ -1,4 +1,4 @@
-module MakeOfChords
+module Notes
   class AllTetradChordsFormation < TetradScale
 
     def self.formed_by_note(note)

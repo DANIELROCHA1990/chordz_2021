@@ -1,4 +1,4 @@
-module GreekModes
+module Notes
   class Mixolydian < Scale
     MIXOLYDIAN_SCALE_MODE = [7, 9, 11, 0, 2, 4, 5, 7].freeze # T T st T T st T
 

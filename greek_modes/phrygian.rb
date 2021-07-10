@@ -1,4 +1,4 @@
-module GreekModes
+module Notes
   class Phrygian < Scale
     PHRYGIAN_SCALE_MODE = [4, 5, 7, 9, 11, 0, 2, 4].freeze # st T T T st T T
     def self.by_note(note)

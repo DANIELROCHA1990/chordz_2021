@@ -1,4 +1,4 @@
-module MakeOfChords
+module Notes
   class MinorTetradChordFormation < TetradScale
     MINOR_TETRAD_CHORD_PATTERN = [0, 3, 7, 11].freeze # Tonica-terca menor-quinta justa
 

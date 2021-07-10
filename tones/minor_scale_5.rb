@@ -1,4 +1,4 @@
-module Tones
+module Notes
   class MinorScaleFive < Tone
     MINOR_SCALE_PATTERN_5 = [7, 9, 10, 0, 2, 3, 5].freeze
     def self.by_note(note)

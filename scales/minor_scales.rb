@@ -1,4 +1,4 @@
-module Scales
+module Notes
   class MinorScale < Scale
     MINOR_SCALE_PATTERN = [0, 2, 3, 5, 7, 8, 10, 0].freeze # T st T T st T T
     def self.by_note(note)

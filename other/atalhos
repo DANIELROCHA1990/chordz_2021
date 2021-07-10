@@ -1,32 +1,19 @@
-# In case of #/b puts Class_name.Class_method('C#/Db')
-# Possible notes: C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B
-# irb >> require_relative 'chordz.rb' >> Enjoy!
+~ Possible notes
+- C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B 
+- C# => C#/Db, 'D#' => D#/Eb, F# => F#/Gb, A# => A#/Bb, Db => C#/Db, 'Eb' => D#/Eb, Gb => F#/Gb, Bb => A#/Bb
 
-# Find chord formation
-# Chord.show_all_chord_form(' ')
-# Chord.major_chord_form_by_note(' ')  
-# Chord.minor_chord_form_by_note(' ') 
-# Chord.diminished_chord_form_by_note(' ')
+~ scripts
+- run_greek_modes.rb > find any greek mode by one note
+- run_key_chords.rb > find key chords (major and minor) by note
+- run_scales.rb > fins scales (major and minor) by note
+- run_tones.rb > find all possibles scales (major and minor) by note
+- run_chords_formation.rb > shows the notes (triad or tetrad) that make up the chords
 
-# Find scales
-# Scale.show_all_scales(' ')
-# Scale.major_by_note(' ')
-# Scale.minor_by_note(' ')
+~ comands
+put in terminal ruby name_of_script.rb > select any option > put the note
 
-# Find scales modes
-# Modes.show_all_modes_by(' ')
-# Modes.ionian_by_note(' ')
-# Modes.dorian_by_note(' ')
-# Modes.phrygian_by_note(' ')
-# Modes.lydian_by_note(' ')
-# Modes.mixolydian_by_note(' ')
-# Modes.aeolian_by_note(' ')
-# Modes.locrian_by_note(' ')
-
-# Find key chords
-# Key.show_all_keys(' ')
-# Key.major_key_by_note(' ')
-# Key.minor_key_by_note(' ')
-
-# Find all major/minor scales note
-# Tone.show_all_scales_by_note(' ')
+~ notes
+- you can enter both uppercase and lowercase letters, in addition to # (for sharps) and b (for flats);
+- the program is still in the creation phase, errors can occur, try not to miss the note and put a letter that does not
+  belong to the scale LOL;
+- ENJOY!!

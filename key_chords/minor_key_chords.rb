@@ -1,4 +1,4 @@
-module KeyChords
+module Notes
   class MinorKeyChord < KeyChord
     MINOR_KEY_PATTERN = [1, 8, 9, 16, 22, 24, 30].freeze  # T st T T st T T
 

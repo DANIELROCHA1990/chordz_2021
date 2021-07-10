@@ -1,4 +1,4 @@
-module KeyChords
+module Notes
   class MajorKeyChord < KeyChord
     MAJOR_KEY_PATTERN = [0, 7, 13, 15, 21, 28, 35].freeze  # T T st T T T st
 

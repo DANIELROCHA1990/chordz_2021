@@ -1,4 +1,4 @@
-module Tones
+module Notes
   class MajorScaleFive < Tone
     MAJOR_SCALE_PATTERN_5 = [7, 9, 11, 0, 2, 4, 6].freeze
 

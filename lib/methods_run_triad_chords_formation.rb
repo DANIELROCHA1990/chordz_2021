@@ -34,7 +34,7 @@ end
 def ask_to_continue__triad_chords_formation
   reply
   sleep_and_clear
-  puts main_menu_triad_chords_formation while @reply == 's'
+  puts main_menu_chords_formation while @reply == 's'
   puts 'Obrigado!'.blue if @reply == 'n'
   clear_and_exit
 end

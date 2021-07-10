@@ -1,4 +1,4 @@
-module Scales
+module Notes
   class MajorScale < Scale
     MAJOR_SCALE_PATTERN = [0, 2, 4, 5, 7, 9, 11, 0].freeze # T T st T T T st
     def self.by_note(note)

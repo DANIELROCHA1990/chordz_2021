@@ -6,7 +6,7 @@ load 'tones/major_scale_5.rb'
 load 'tones/major_scale_6.rb'
 load 'tones/major_scale_7.rb'
 
-module Tones
+module Notes
   class AllPossibleMajorScalesByNote < Tone
 
     def self.all_major_by_note(note)

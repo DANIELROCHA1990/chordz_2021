@@ -17,12 +17,13 @@ end
 
 def options_of_triad_chords_formation
   case option
-  when '1' then scale_presenter__triad_chords_formation { MakeOfChords::MajorTriadChordFormation.by_note(@note) }
-  when '2' then scale_presenter__triad_chords_formation { MakeOfChords::MinorTriadChordFormation.by_note(@note) }
-  when '3' then scale_presenter__triad_chords_formation { MakeOfChords::DiminishedTriadChordFormation.by_note(@note) }
-  when '4' then scale_presenter__triad_chords_formation { MakeOfChords::AllTriadChordsFormation.formed_by_note(@note) }
+  when '1' then scale_presenter__triad_chords_formation { Notes::MajorTriadChordFormation.by_note(@note) }
+  when '2' then scale_presenter__triad_chords_formation { Notes::MinorTriadChordFormation.by_note(@note) }
+  when '3' then scale_presenter__triad_chords_formation { Notes::DiminishedTriadChordFormation.by_note(@note) }
+  when '4' then scale_presenter__triad_chords_formation { Notes::AllTriadChordsFormation.formed_by_note(@note) }
   else invalid_option_message_triad_chords_formation
   end
 end
 
 main_menu_triad_chords_formation
+

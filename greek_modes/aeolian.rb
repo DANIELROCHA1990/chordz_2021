@@ -1,7 +1,4 @@
-# frozen_string_literal: true
-
-# Aqui onde sera formado o modo aeolio
-module GreekModes
+module Notes
   # Classe Aeolian herda de Scale, no arquivo scales.rb
   class Aeolian < Scale
     AEOLIAN_SCALE_MODE = [9, 11, 0, 2, 4, 5, 7, 9].freeze # T st T T st T T

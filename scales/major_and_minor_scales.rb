@@ -1,4 +1,4 @@
-module Scales
+module Notes
   class MajorAndMinorScale < Scale
     def self.show_all_scales_by_note(note)
       major = MajorScale.by_note(note)

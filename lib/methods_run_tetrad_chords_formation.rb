@@ -21,7 +21,7 @@ end
 def invalid_option_message_tetrad_chords_formation
   system('clear')
   puts 'Escolha uma opção válida!'.red
-  puts main_menu_greek_modes
+  puts main_menu_tetrad_chords_formation
 end
 
 def scale_presenter_tetrad_chords_formation
@@ -34,7 +34,7 @@ end
 def ask_to_continue_tetrad_chords_formation
   reply
   sleep_and_clear
-  puts main_menu_tetrad_chords_formation while @reply == 's'
+  puts main_menu_chords_formation while @reply == 's'
   puts 'Obrigado!'.blue if @reply == 'n'
   clear_and_exit
 end
