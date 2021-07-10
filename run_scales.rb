@@ -27,6 +27,7 @@ def options_of_menu_scales
   when '1' then scale_presenter_scales { Notes::MajorScale.by_note(@note) }
   when '2' then scale_presenter_scales { Notes::MinorScale.by_note(@note) }
   when '3' then scale_presenter_scales { Notes::MajorAndMinorScale.show_all_scales_by_note(@note) }
+  when 'exit' then clear_and_exit
   else
     invalid_option_message { main_menu_scales }
   end

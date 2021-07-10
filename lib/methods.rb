@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def option
   @option = gets.chomp
 end
@@ -19,15 +21,16 @@ def sleep_and_clear
 end
 
 def clear_and_exit
-  sleep 1
+  puts 'Obrigado!'.blue
+  sleep 1 # Espera por 1 segundo
   system('clear')
   exit
 end
 
 def invalid_option_message
-  system('clear')
+  system('clear') # Limpa a tela
   puts 'Escolha uma opcao valida!'.red
-  puts yield
+  puts yield # Chama o bloco de codigo
 end
 
 def ask_to_continue
@@ -39,17 +42,10 @@ def ask_to_continue
 end
 
 # Metodo nao utilizado ainda
-def ask_to_continue_chordz 
-  reply
-  sleep_and_clear_chordz
-  puts main_menu_chordz while @reply == 's'
-  puts 'Obrigado!'.blue if @reply == 'n'
-  clear_and_exit_chordz
-end
-
-def clear_and_exit_chordz
-  puts 'Obrigado!'.blue
-  sleep 1
-  system('clear')
-  exit
-end
+# def ask_to_continue_chordz
+#   reply
+#   sleep_and_clear_chordz
+#   puts main_menu_chordz while @reply == 's'
+#   puts 'Obrigado!'.blue if @reply == 'n'
+#   clear_and_exit_chordz
+# end

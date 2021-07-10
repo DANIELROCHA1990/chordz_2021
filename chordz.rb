@@ -17,7 +17,7 @@ def options_of_chordz
   when '3' then load './run_tones.rb'
   when '4' then load './run_key_chords.rb'
   when '5' then load './run_chords_formation.rb'
-  when '6' then clear_and_exit_chordz
+  when '6' then clear_and_exit
   else
     invalid_option { main_menu_chordz }
   end
