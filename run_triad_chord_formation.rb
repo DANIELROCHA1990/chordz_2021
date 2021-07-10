@@ -1,5 +1,5 @@
 require 'colorize'
-load 'lib/scale_triad.rb'
+load 'lib/scales.rb'
 load 'triad_chords_formation/major_triad_chords_formation.rb'
 load 'triad_chords_formation/minor_triad_chords_formation.rb'
 load 'triad_chords_formation/diminished_triad_chords_formation.rb'

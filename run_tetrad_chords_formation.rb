@@ -1,5 +1,6 @@
 require 'colorize'
 load 'lib/scale_tetrad.rb'
+load 'lib/constantes.rb'
 load 'tetrad_chords_formation/major_tetrad_chords_formation.rb'
 load 'tetrad_chords_formation/minor_tetrad_chords_formation.rb'
 load 'tetrad_chords_formation/diminished_tetrad_chords_formation.rb'

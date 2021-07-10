@@ -23,7 +23,7 @@ def options_of_menu_greek_modes
   when '5' then scale_presenter_greek_modes { GreekModes::Mixolydian.by_note(@note) }
   when '6' then scale_presenter_greek_modes { GreekModes::Aeolian.by_note(@note) }
   when '7' then scale_presenter_greek_modes { GreekModes::Locrian.by_note(@note) }
-  when '8' then scale_presenter_greek_modes { GreekModes::AllModesOfScales.all_by_note(@note) }
+  when '8' then scale_presenter_greek_modes { GreekModes::AllModesOfScale.all_by_note(@note) }
   else invalid_option_message_greek_modes end
 end
 

@@ -4,7 +4,7 @@ module KeyChords
 
     def self.by_note(note)
       minor_key_index = index_of_mode(note)
-      MINOR_KEY_PATTERN.map do |minor_key_interval| # Interação com a classe Keys
+      MINOR_KEY_PATTERN.map do |minor_key_interval| # Interacao com a classe Keys
         minor_key_note_index = minor_key_index + minor_key_interval
         new_minor_key_note_index = minor_key_note_index - CHROMATIC.length
         scale_maker_by_note(minor_key_note_index, new_minor_key_note_index)

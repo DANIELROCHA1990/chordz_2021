@@ -1,5 +1,5 @@
 module GreekModes
-  class AllModesOfScales < Scale
+  class AllModesOfScale < Scale
 
     def self.all_by_note(note)
       ionian = Ionian.by_note(note)

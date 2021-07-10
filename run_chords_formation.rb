@@ -8,13 +8,13 @@ puts '##########################'.green
 def invalid_option_chords_formation
   system('clear')
   puts 'Escolha uma opção válida!'.red
-  puts main_menu_chords_formation
+  p main_menu_chords_formation
 end
 
 def main_menu_chords_formation
   puts 'Escolha o modo abaixo:'.green
   puts '1 - TETRAD | 2 - TRIAD'.blue
-  p options_of_chords_formation
+  options_of_chords_formation
 end
 
 def options_of_chords_formation

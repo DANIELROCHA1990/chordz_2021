@@ -26,7 +26,7 @@ end
 
 def scale_presenter_tones
   puts 'Digite a nota:'.yellow
-  print @note = gets.chomp.upcase
+  print @note = gets.chomp.capitalize
   puts yield.to_s.colorize(color: :red, background: :black)
   puts ask_to_continue_tones
 end

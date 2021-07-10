@@ -26,7 +26,7 @@ end
 
 def scale_presenter__triad_chords_formation
   puts 'Digite a nota:'.yellow
-  print @note = gets.chomp.upcase
+  print @note = gets.chomp.capitalize
   puts yield.to_s.colorize(color: :red, background: :black)
   puts ask_to_continue__triad_chords_formation
 end
@@ -34,7 +34,7 @@ end
 def ask_to_continue__triad_chords_formation
   reply
   sleep_and_clear
-  puts main_menu_chords_formation while @reply == 's'
+  puts main_menu_triad_chords_formation while @reply == 's'
   puts 'Obrigado!'.blue if @reply == 'n'
   clear_and_exit
 end
